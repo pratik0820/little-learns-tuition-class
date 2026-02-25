@@ -15,6 +15,7 @@ import './TeacherProfileCard.css';
  * @param {string} props.photoAlt - Alt text for teacher photo
  * @param {string} props.name - Teacher's name
  * @param {string} props.credentials - Teacher's credentials/qualifications
+ * @param {string} props.phone - Teacher's phone number
  * @param {string} props.experience - Experience summary text
  * @param {string} props.className - Additional CSS classes
  */
@@ -23,6 +24,7 @@ const TeacherProfileCard = ({
   photoAlt = 'Teacher photo',
   name,
   credentials,
+  phone,
   experience,
   className = '',
   ...rest
@@ -63,6 +65,14 @@ const TeacherProfileCard = ({
         {credentials && (
           <p className="teacher-profile-card__credentials">{credentials}</p>
         )}
+        {phone && (
+          <p className="teacher-profile-card__phone">
+            <span className="teacher-profile-card__phone-icon">📞</span>
+            <a href={`tel:${phone}`} className="teacher-profile-card__phone-link">
+              {phone}
+            </a>
+          </p>
+        )}
       </div>
       
       {experience && (
@@ -80,6 +90,7 @@ TeacherProfileCard.propTypes = {
   photoAlt: PropTypes.string,
   name: PropTypes.string.isRequired,
   credentials: PropTypes.string,
+  phone: PropTypes.string,
   experience: PropTypes.string,
   className: PropTypes.string
 };

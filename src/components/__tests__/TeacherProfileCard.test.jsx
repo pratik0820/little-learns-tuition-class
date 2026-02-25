@@ -54,6 +54,32 @@ describe('TeacherProfileCard', () => {
     });
   });
 
+  describe('Phone Display', () => {
+    it('renders phone number when provided', () => {
+      render(
+        <TeacherProfileCard
+          name="Mrs. Priya Sharma"
+          phone="+91 8390339784"
+        />
+      );
+      
+      expect(screen.getByText('+91 8390339784')).toBeInTheDocument();
+      const phoneLink = screen.getByRole('link', { name: '+91 8390339784' });
+      expect(phoneLink).toHaveAttribute('href', 'tel:+91 8390339784');
+    });
+
+    it('does not render phone section when not provided', () => {
+      render(
+        <TeacherProfileCard
+          name="Mrs. Priya Sharma"
+        />
+      );
+      
+      const phone = document.querySelector('.teacher-profile-card__phone');
+      expect(phone).not.toBeInTheDocument();
+    });
+  });
+
   describe('Credentials Display', () => {
     it('renders credentials when provided', () => {
       render(
@@ -149,6 +175,7 @@ describe('TeacherProfileCard', () => {
           photoUrl="/images/teacher.jpg"
           photoAlt="Teacher Priya Sharma"
           credentials="B.Ed., M.A. in Education"
+          phone="+91 8390339784"
           experience="With over 15 years of teaching experience"
         />
       );
@@ -156,6 +183,7 @@ describe('TeacherProfileCard', () => {
       expect(screen.getByText('Mrs. Priya Sharma')).toBeInTheDocument();
       expect(screen.getByAltText('Teacher Priya Sharma')).toBeInTheDocument();
       expect(screen.getByText('B.Ed., M.A. in Education')).toBeInTheDocument();
+      expect(screen.getByText('+91 8390339784')).toBeInTheDocument();
       expect(screen.getByText('Experience')).toBeInTheDocument();
       expect(screen.getByText('With over 15 years of teaching experience')).toBeInTheDocument();
     });

@@ -27,34 +27,18 @@
 .teacher-section__content {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-6);
+  gap: var(--space-8);
   max-width: 1200px;
   margin: 0 auto;
-  align-items: center;
-}
-
-.teacher-section__profile {
-  text-align: center;
-}
-
-/* .teacher-section__photo {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: var(--radius-xl);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-} */
-
-.teacher-section__photo {
-  width: 300px;        /* fixed equal width & height */
-  height: 300px;
-  object-fit: cover;   /* keeps image nicely cropped */
-  border-radius: 50%;  /* makes it circular */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: var(--space-8);
 }
 
 .teacher-section__info {
   text-align: center;
+  padding: var(--space-6);
+  background: #f9f9f9;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .teacher-section__name {
@@ -93,7 +77,7 @@
   font-style: italic;
   color: var(--color-text-secondary);
   padding: var(--space-4);
-  background: #f5f5f5;
+  background: white;
   border-radius: var(--radius-lg);
   margin: var(--space-4) 0;
 }
@@ -110,13 +94,37 @@
   color: var(--color-primary-dark);
 }
 
+.teacher-section__phone {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color 0.2s ease;
+}
+
+.teacher-section__phone:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
 .teacher-section__map {
+  text-align: center;
+  margin-top: var(--space-8);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.teacher-section__map-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
   text-align: center;
 }
 
 .teacher-section__map-img {
   width: 100%;
-  max-width: 300px;
+  max-width: 600px;
   height: auto;
   border-radius: var(--radius-lg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -124,7 +132,8 @@
 
 @media (min-width: 768px) {
   .teacher-section__content {
-    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
   }
 
   .teacher-section__info {

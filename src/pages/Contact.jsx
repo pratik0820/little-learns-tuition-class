@@ -42,45 +42,43 @@ const Contact = () => {
       </Section>
 
       <Section style="default" className="contact-content-section">
-        <div className="contact-layout">
-          {/* Left Column: Contact Info and Map */}
-          <div className="contact-layout__info">
-            <h2 className="contact-section-title">Get in Touch</h2>
-            <ContactInfo
-              phoneNumber="+918669775438"
-              whatsappNumber="918669775438"
-              whatsappMessage="Hi! I'm contacting you via your website. I'd like to know more about Little Learner's."
-              address={{
-                street: 'Dattanagar behind Siddhivinayak Mandir',
-                city: 'At Little Pearls Nursery School, Pune',
-                state: 'Maharashtra',
-                pincode: '411046'
-              }}
-              operatingHours={{
-                weekdays: 'Monday - Saturday',
-                timing: '6:00 PM - 8:00 PM',
-                closed: 'Sunday'
-              }}
+        {/* Get in Touch Section */}
+        <div className="contact-info-section">
+          <h2 className="contact-section-title">Get in Touch</h2>
+          <ContactInfo
+            phoneNumber="+91 8390339784"
+            whatsappNumber="91 8390339784"
+            whatsappMessage="Hi! I'm contacting you via your website. I'd like to know more about Little Learner's."
+            address={{
+              street: 'Dattanagar behind Siddhivinayak Mandir',
+              city: 'At Little Pearls Nursery School, Pune',
+              state: 'Maharashtra',
+              pincode: '411046'
+            }}
+            operatingHours={{
+              weekdays: 'Monday - Saturday',
+              timing: '6:00 PM - 8:00 PM',
+              closed: 'Sunday'
+            }}
+          />
+
+          <div className="contact-map-container">
+            <h3 className="contact-subsection-title">Find Us</h3>
+            <GoogleMapsEmbed
+              embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.2455560306453!2d73.88345127371906!3d18.472533170642738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ea88f8769645%3A0xa5707b518bff35ef!2sLittle%20Pearl&#39;s%20Preschool-Pune!5e0!3m2!1sen!2sin!4v1772018904748!5m2!1sen!2sin"
+              title="Little Learner's Location"
             />
-
-            <div className="contact-map-container">
-              <h3 className="contact-subsection-title">Find Us</h3>
-              <GoogleMapsEmbed
-                embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0977736716633!2d-122.41941548468186!3d37.77492977975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                title="Little Learner's Location"
-              />
-            </div>
           </div>
+        </div>
 
-          {/* Right Column: Enquiry Form */}
-          <div className="contact-layout__form">
-            <h2 className="contact-section-title">Send Us an Enquiry</h2>
-            <p className="contact-form-description">
-              Fill out the form below and we'll contact you within 24 hours to discuss 
-              your child's needs.
-            </p>
-            <EnquiryForm onSubmit={handleFormSubmit} />
-          </div>
+        {/* Send Us an Enquiry Section */}
+        <div className="contact-form-section">
+          <h2 className="contact-section-title">Send Us an Enquiry</h2>
+          <p className="contact-form-description">
+            Fill out the form below and we'll contact you within 24 hours to discuss 
+            your child's needs.
+          </p>
+          <EnquiryForm onSubmit={handleFormSubmit} />
         </div>
       </Section>
     </div>

@@ -20,8 +20,8 @@ const ContactInfoDemo = () => {
       <section style={{ marginBottom: '3rem' }}>
         <h2 style={{ marginBottom: '1rem' }}>Custom Contact Info</h2>
         <ContactInfo
-          phoneNumber="+91 98765 43210"
-          whatsappNumber="919876543210"
+          phoneNumber="+91 8390339784"
+          whatsappNumber="8390339784"
           whatsappMessage="Hi! I'd like to enquire about tuition classes for my child."
           address={{
             street: '456 Education Street',

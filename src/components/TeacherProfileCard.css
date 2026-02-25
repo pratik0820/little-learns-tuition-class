@@ -72,8 +72,35 @@
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-medium);
   color: var(--color-primary);
+  margin: 0 0 var(--space-2) 0;
+  line-height: var(--line-height-normal);
+}
+
+.teacher-profile-card__phone {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
   margin: 0;
   line-height: var(--line-height-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.teacher-profile-card__phone-icon {
+  font-size: var(--font-size-lg);
+}
+
+.teacher-profile-card__phone-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color 0.2s ease;
+}
+
+.teacher-profile-card__phone-link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
 }
 
 /* ========================================

@@ -1,32 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GoogleMapsEmbed from './GoogleMapsEmbed';
 import './TeacherSection.css';
 
 /**
  * Teacher Section Component
  * 
- * Displays teacher profile with photo and location map
+ * Displays two teacher profiles with a common location map
  */
 const TeacherSection = () => {
   return (
     <section className="teacher-section">
       <div className="container">
-        <h2 className="teacher-section__title">Meet Your Teacher</h2>
+        <h2 className="teacher-section__title">Meet Your Teachers</h2>
         <div className="teacher-section__content">
-          <div className="teacher-section__profile">
-            <img 
-              src="/images/shivani.jpeg" 
-              alt="Mrs. Shivani - Teacher at Little Learner's" 
-              className="teacher-section__photo"
-            />
-          </div>
           <div className="teacher-section__info">
-            <h3 className="teacher-section__name">Mrs. Shivani</h3>
+            <h3 className="teacher-section__name">Ms. Shivani Chinchvale</h3>
             <p className="teacher-section__subtitle">Experienced & Caring Educator</p>
             <div className="teacher-section__details">
               <p className="teacher-section__detail">
                 <span className="teacher-section__icon">✓</span>
                 2+ Years of Teaching Experience
+              </p>
+              <p className="teacher-section__detail">
+                <span className="teacher-section__icon">📞</span>
+                <a href="tel:+918390339784" className="teacher-section__phone">+91 8390339784</a>
               </p>
               <p className="teacher-section__quote">
                 "I believe in making learning fun and engaging for every child."
@@ -36,13 +34,33 @@ const TeacherSection = () => {
               Learn More About Me →
             </Link>
           </div>
-          <div className="teacher-section__map">
-            <img 
-              src="/images/location-map.png" 
-              alt="Little Learner's Location - Dattanagar, Pune" 
-              className="teacher-section__map-img"
-            />
+          <div className="teacher-section__info">
+            <h3 className="teacher-section__name">Ms. Nikita Bhandwalkar</h3>
+            <p className="teacher-section__subtitle">Dedicated Learning Specialist</p>
+            <div className="teacher-section__details">
+              <p className="teacher-section__detail">
+                <span className="teacher-section__icon">✓</span>
+                2+ Years of Teaching Experience
+              </p>
+              <p className="teacher-section__detail">
+                <span className="teacher-section__icon">📞</span>
+                <a href="tel:+919876543211" className="teacher-section__phone">+91 98765 43211</a>
+              </p>
+              <p className="teacher-section__quote">
+                "Every child has unique potential waiting to be discovered."
+              </p>
+            </div>
+            <Link to="/about" className="teacher-section__link">
+              Learn More About Me →
+            </Link>
           </div>
+        </div>
+        <div className="teacher-section__map">
+          <h3 className="teacher-section__map-titlOur Locatione">Our Location</h3>
+          <GoogleMapsEmbed
+            embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.2455560306453!2d73.88345127371906!3d18.472533170642738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ea88f8769645%3A0xa5707b518bff35ef!2sLittle%20Pearl&#39;s%20Preschool-Pune!5e0!3m2!1sen!2sin!4v1772018904748!5m2!1sen!2sin"
+            title="Little Learner's Location - Dattanagar, Pune"
+          />
         </div>
       </div>
     </section>

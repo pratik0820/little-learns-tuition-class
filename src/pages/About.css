@@ -2,6 +2,22 @@
   min-height: 100vh;
 }
 
+/* Teachers Grid */
+.teachers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .teachers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-10);
+  }
+}
+
 /* Content Block Styling */
 .content-block {
   max-width: 800px;
