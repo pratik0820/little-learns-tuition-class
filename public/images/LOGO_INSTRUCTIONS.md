@@ -4,7 +4,7 @@
 
 The website now has logo support in two places:
 
-1. **Header Logo** - Displays in the navigation bar next to "Little Learner's"
+1. **Header Logo** - Displays in the navigation bar next to "Little Learn's"
 2. **Favicon** - Shows in the browser tab/URL bar
 
 ## How to Replace with Your Own Logo
@@ -26,7 +26,7 @@ If you prefer PNG/JPG instead of SVG:
    ```jsx
    <img 
      src="/public/images/little-leanrs-logo.jpeg"  // Change from /logo.svg to /logo.png
-     alt="Little Learner's Logo" 
+     alt="Little Learn's Logo" 
      className="header__logo-image"
    />
    ```

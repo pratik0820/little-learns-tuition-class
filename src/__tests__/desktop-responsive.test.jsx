@@ -142,7 +142,7 @@ describe('Desktop Responsive Layouts (1024px+)', () => {
     it('should render TestimonialCard with desktop styling', () => {
       const mockTestimonial = {
         id: 'test-1',
-        parentName: 'Mrs. Sharma',
+        parentName: 'Mrs. Shinde',
         studentName: 'Aarav',
         studentClass: 'Class 4',
         feedback: 'Excellent teaching!',

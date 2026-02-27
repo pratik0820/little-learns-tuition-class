@@ -22,7 +22,7 @@ import './ContactInfo.css';
 const ContactInfo = ({
   phoneNumber = '+91 8390339784',
   whatsappNumber,
-  whatsappMessage = "Hi! I'm contacting you via your website. I'd like to know more about Little Learner's.",
+  whatsappMessage = "Hi! I'm contacting you via your website. I'd like to know more about Little Learns.",
   address = {
     street: 'Dattanagar behind Siddhivinayak Mandir',
     city: 'At Little Pearls Nursery School, Pune',

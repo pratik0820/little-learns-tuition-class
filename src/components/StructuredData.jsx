@@ -18,8 +18,8 @@ const StructuredData = ({ type = 'organization', data = null }) => {
     const defaultOrgSchema = {
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
-      "name": "Little Learner's - Tuition Classes for Primary Students",
-      "description": "Little Learner's offers quality tuition classes for primary school students (Class 1-5) with small batch sizes, individual attention, and concept-based learning",
+      "name": "Little Learns - Tuition Classes for Primary Students",
+      "description": "Little Learns offers quality tuition classes for primary school students (Class 1-5) with small batch sizes, individual attention, and concept-based learning",
       "url": window.location.origin,
       "telephone": "+91XXXXXXXXXX",
       "address": {

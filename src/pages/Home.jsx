@@ -29,7 +29,7 @@ const Home = () => {
     <main className="home">
       <SEO 
         title="Home"
-        description="Little Learner's offers quality tuition classes for primary school students (Class 1-5). Small batch sizes, individual attention, homework support, and concept-based learning. Admissions open for new batch."
+        description="Little Learns offers quality tuition classes for primary school students (Class 1-5). Small batch sizes, individual attention, homework support, and concept-based learning. Admissions open for new batch."
         keywords="tuition classes, primary school, class 1-5, homework help, small batch, individual attention, concept-based learning, Pune"
       />
       <StructuredData type="organization" />

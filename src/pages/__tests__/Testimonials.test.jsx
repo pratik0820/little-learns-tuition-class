@@ -17,9 +17,9 @@ describe('Testimonials Page', () => {
     render(<Testimonials />);
     
     // Check for specific parent names
-    expect(screen.getByText('Mrs. Sharma')).toBeInTheDocument();
-    expect(screen.getByText('Mr. Patel')).toBeInTheDocument();
-    expect(screen.getByText('Mrs. Reddy')).toBeInTheDocument();
+    expect(screen.getByText('Mrs. Shinde')).toBeInTheDocument();
+    expect(screen.getByText('Mr. Rane')).toBeInTheDocument();
+    expect(screen.getByText('Mrs. Nikam')).toBeInTheDocument();
   });
 
   it('displays testimonial feedback text', () => {

@@ -14,9 +14,9 @@ describe('TestimonialsPreview Component', () => {
       render(<TestimonialsPreview />);
       
       // Check for default testimonial content
-      expect(screen.getByText(/Mrs. Sharma/i)).toBeInTheDocument();
-      expect(screen.getByText(/Mr. Patel/i)).toBeInTheDocument();
-      expect(screen.getByText(/Mrs. Reddy/i)).toBeInTheDocument();
+      expect(screen.getByText(/Mrs. Shinde/i)).toBeInTheDocument();
+      expect(screen.getByText(/Mr. Rane/i)).toBeInTheDocument();
+      expect(screen.getByText(/Mrs. Nikam/i)).toBeInTheDocument();
     });
 
     it('displays exactly 3 testimonials by default', () => {

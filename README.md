@@ -10,6 +10,7 @@ A modern, responsive website for tuition classes targeting primary school studen
 - Contact form with validation
 - Testimonials and FAQ sections
 - SEO-friendly and accessible
+- Google Analytics 4 visitor tracking
 
 ## Project Structure
 
@@ -45,12 +46,19 @@ tuition-website/
 npm install
 ```
 
-2. Start the development server:
+2. Set up Google Analytics (optional):
+```bash
+cp .env.example .env
+# Edit .env and add your Google Analytics Measurement ID
+```
+See [ANALYTICS_SETUP_GUIDE.md](./ANALYTICS_SETUP_GUIDE.md) for detailed instructions.
+
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
-3. Open your browser and navigate to `http://localhost:3000`
+4. Open your browser and navigate to `http://localhost:3000`
 
 ## Available Scripts
 
@@ -64,6 +72,7 @@ npm run dev
 - React 18
 - React Router DOM
 - Vite
+- Google Analytics 4
 - ESLint
 - Prettier
 

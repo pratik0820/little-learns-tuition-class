@@ -4,6 +4,8 @@
  * Helper functions for generating WhatsApp URLs with pre-filled messages
  */
 
+import { trackWhatsAppClick } from './analytics';
+
 /**
  * WhatsApp configuration
  */
@@ -32,10 +34,13 @@ export const WHATSAPP_CONFIG = {
  * // Use custom message and phone number
  * const url = generateWhatsAppURL("Custom message", "919876543210");
  */
-export const generateWhatsAppURL = (customMessage = null, phoneNumber = null) => {
+export const generateWhatsAppURL = (customMessage = null, phoneNumber = null, source = 'unknown') => {
   const message = customMessage || WHATSAPP_CONFIG.defaultMessage;
   const phone = phoneNumber || WHATSAPP_CONFIG.phoneNumber;
   const encodedMessage = encodeURIComponent(message);
+  
+  // Track WhatsApp click
+  trackWhatsAppClick(source);
   
   return `https://wa.me/${phone}?text=${encodedMessage}`;
 };
@@ -70,9 +75,11 @@ export const WHATSAPP_MESSAGES = {
  */
 export const getContextualWhatsAppURL = (context = 'home', subContext = null) => {
   let message = WHATSAPP_MESSAGES.home;
+  let source = context;
   
   if (context === 'classes' && subContext && WHATSAPP_MESSAGES.classes[subContext]) {
     message = WHATSAPP_MESSAGES.classes[subContext];
+    source = `${context}_${subContext}`;
   } else if (context === 'classes') {
     // If classes context without valid subcontext, use home message
     message = WHATSAPP_MESSAGES.home;
@@ -80,5 +87,5 @@ export const getContextualWhatsAppURL = (context = 'home', subContext = null) =>
     message = WHATSAPP_MESSAGES[context];
   }
   
-  return generateWhatsAppURL(message);
+  return generateWhatsAppURL(message, null, source);
 };

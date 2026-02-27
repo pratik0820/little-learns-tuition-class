@@ -10,7 +10,7 @@ function Testimonials() {
     {
       id: 1,
       feedback: "My son's grades improved significantly after joining these classes. The teacher's individual attention and concept-based teaching really made a difference. He now looks forward to attending classes!",
-      parentName: "Mrs. Sharma",
+      parentName: "Mrs. Shinde",
       studentName: "Aarav",
       studentClass: "Class 4",
       improvement: "Math score increased from 65% to 85%"
@@ -18,7 +18,7 @@ function Testimonials() {
     {
       id: 2,
       feedback: "The small batch size ensures my daughter gets proper attention. Her confidence in English and Math has grown tremendously. The homework support is especially helpful for working parents like us.",
-      parentName: "Mr. Patel",
+      parentName: "Mr. Rane",
       studentName: "Diya",
       studentClass: "Class 3",
       improvement: "Overall improvement from B grade to A grade"
@@ -26,7 +26,7 @@ function Testimonials() {
     {
       id: 3,
       feedback: "Excellent teaching methodology! My child struggled with basic concepts, but the patient and caring approach here helped him catch up with his peers. Highly recommend for primary school students.",
-      parentName: "Mrs. Reddy",
+      parentName: "Mrs. Nikam",
       studentName: "Arjun",
       studentClass: "Class 2",
       improvement: "Reading skills improved dramatically"
@@ -34,7 +34,7 @@ function Testimonials() {
     {
       id: 4,
       feedback: "The regular practice tests and feedback helped my daughter prepare well for her exams. She scored her best marks this year. The teacher truly cares about each student's progress.",
-      parentName: "Mr. Kumar",
+      parentName: "Mr. Sawant",
       studentName: "Ananya",
       studentClass: "Class 5",
       improvement: "Scored 92% in final exams"
@@ -42,7 +42,7 @@ function Testimonials() {
     {
       id: 5,
       feedback: "My son was weak in mathematics, but the step-by-step teaching approach here built his foundation strong. Now he solves problems confidently and even helps his classmates!",
-      parentName: "Mrs. Desai",
+      parentName: "Mrs. Pawar",
       studentName: "Rohan",
       studentClass: "Class 3",
       improvement: "Math confidence and problem-solving skills improved"
@@ -50,7 +50,7 @@ function Testimonials() {
     {
       id: 6,
       feedback: "The personalized attention and friendly environment make learning enjoyable for my daughter. She has become more curious and asks more questions. Great place for young learners!",
-      parentName: "Mr. Singh",
+      parentName: "Mr. Jadhav",
       studentName: "Priya",
       studentClass: "Class 1",
       improvement: "Developed love for learning and reading"

@@ -24,7 +24,7 @@ const SEO = ({
 }) => {
   useEffect(() => {
     // Update document title
-    const fullTitle = `${title} | Little Learner's - Classes for 1st to 5th Standard`;
+    const fullTitle = `${title} | Little Learns - Classes for 1st to 5th Standard`;
     document.title = fullTitle;
 
     // Update or create meta tags

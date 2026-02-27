@@ -19,7 +19,7 @@ import './Hero.css';
  * @param {Object} props.quickInfo - Quick info object with standards, subjects, and location
  */
 const Hero = ({
-  headline = "Little Learner's - Personalized Classes for 1st to 5th Standard",
+  headline = "Little Learns - Personalized Classes for 1st to 5th Standard",
   subheadline = "Building Bright Futures with Individual Attention & Care",
   enrollLink = "/contact",
   whatsappLink = getContextualWhatsAppURL('home'),
@@ -54,7 +54,7 @@ const Hero = ({
                 variant="primary" 
                 size="large" 
                 href={enrollLink}
-                ariaLabel="Enroll now at Little Learner's"
+                ariaLabel="Enroll now at Little Learn's"
               >
                 Enroll Now
               </Button>
@@ -73,7 +73,7 @@ const Hero = ({
           <div className="hero__image-wrapper">
             <img 
               src={heroImage} 
-              alt="Happy children learning together at Little Learner's" 
+              alt="Happy children learning together at Little Learn's" 
               className="hero__image"
             />
           </div>

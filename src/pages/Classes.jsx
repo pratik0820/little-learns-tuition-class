@@ -22,17 +22,17 @@ function Classes() {
 
       <Section style="default" className="courses-section">
         <h2 className="section__title">Available Programs</h2>
+        <p className="courses-note">All our classes maintain small batch sizes to ensure personalized attention for every student.</p>
         <div className="courses-grid">
           <CourseCard
             title="Class 1-2"
             ageRange="6-8 years"
-            subjects={['English', 'Mathematics', 'EVS']}
+            subjects={['All subjects covered as per school curriculum']}
             curriculum={[
               'Reading & writing foundation',
               'Basic maths concepts',
               'Homework guidance'
             ]}
-            batchSize="6-8 students"
             duration="1.5 hours"
             method="Interactive learning with activities"
           />
@@ -40,13 +40,12 @@ function Classes() {
           <CourseCard
             title="Class 3-5"
             ageRange="8-11 years"
-            subjects={['English', 'Mathematics', 'Science', 'Social Studies']}
+            subjects={['All subjects covered as per school curriculum']}
             curriculum={[
               'Concept clarity',
               'Exam preparation',
               'Practice tests'
             ]}
-            batchSize="8-10 students"
             duration="2 hours"
             method="Concept-based learning with regular assessments"
           />
@@ -72,9 +71,9 @@ function Classes() {
           </div>
           <div className="feature-item">
             <div className="feature-icon">🎯</div>
-            <h3>Regular Practice Tests</h3>
+            <h3>Weekly Practice Tests</h3>
             <p>
-              Regular tests help identify learning gaps and track progress. Students get comfortable with exam formats and learn to manage their time better.
+              Weekly tests help identify learning gaps and track progress. Students get comfortable with exam formats and learn to manage their time better.
             </p>
           </div>
           <div className="feature-item">

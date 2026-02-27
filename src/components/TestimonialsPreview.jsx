@@ -20,19 +20,19 @@ const TestimonialsPreview = ({ testimonials = [], maxDisplay = 3 }) => {
     {
       id: 1,
       feedback: "My daughter's confidence in mathematics has improved tremendously. The small batch size ensures she gets individual attention.",
-      parentName: "Mrs. Sharma",
+      parentName: "Mrs. Shinde",
       studentInfo: "Parent of Class 4 student"
     },
     {
       id: 2,
       feedback: "The homework support has been invaluable. My son now completes his assignments on time and understands the concepts better.",
-      parentName: "Mr. Patel",
+      parentName: "Mr. Rane",
       studentInfo: "Parent of Class 3 student"
     },
     {
       id: 3,
       feedback: "Excellent teaching methods! My child looks forward to attending classes. The teacher is patient and explains concepts clearly.",
-      parentName: "Mrs. Reddy",
+      parentName: "Mrs. Nikam",
       studentInfo: "Parent of Class 5 student"
     }
   ];

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Section from '../components/Section';
 import ContactInfo from '../components/ContactInfo';
 import GoogleMapsEmbed from '../components/GoogleMapsEmbed';
 import EnquiryForm from '../components/EnquiryForm';
 import SEO from '../components/SEO';
+// import { sendEnquiryEmail } from '../services/emailService';
 import './Contact.css';
 
 /**
@@ -22,8 +23,21 @@ import './Contact.css';
  */
 const Contact = () => {
   const handleFormSubmit = (formData) => {
-    // In a real application, this would send data to a backend
-    console.log('Form submitted:', formData);
+    // Format the enquiry data for WhatsApp message
+    const message = `*New Enquiry from Website*
+
+*Student Name:* ${formData.firstName} ${formData.middleName} ${formData.surname}
+*Standard:* ${formData.studentStandard}
+*Contact Number:* ${formData.contactNumber}
+${formData.message ? `*Message:* ${formData.message}` : ''}
+
+_This enquiry was submitted through the website._`;
+
+    // Generate WhatsApp URL with the enquiry details
+    const whatsappURL = generateWhatsAppURL(message);
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappURL, '_blank');
   };
 
   return (
@@ -36,7 +50,7 @@ const Contact = () => {
       
       <Section style="hero" title="Contact Us">
         <p className="contact-intro">
-          Have questions about Little Learner's? We'd love to hear from you. 
+          Have questions about Little Learns? We'd love to hear from you. 
           Reach out using any of the methods below, and we'll get back to you soon.
         </p>
       </Section>
@@ -48,7 +62,7 @@ const Contact = () => {
           <ContactInfo
             phoneNumber="+91 8390339784"
             whatsappNumber="91 8390339784"
-            whatsappMessage="Hi! I'm contacting you via your website. I'd like to know more about Little Learner's."
+            whatsappMessage="Hi! I'm contacting you via your website. I'd like to know more about Little Learns."
             address={{
               street: 'Dattanagar behind Siddhivinayak Mandir',
               city: 'At Little Pearls Nursery School, Pune',
@@ -66,7 +80,7 @@ const Contact = () => {
             <h3 className="contact-subsection-title">Find Us</h3>
             <GoogleMapsEmbed
               embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.2455560306453!2d73.88345127371906!3d18.472533170642738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ea88f8769645%3A0xa5707b518bff35ef!2sLittle%20Pearl&#39;s%20Preschool-Pune!5e0!3m2!1sen!2sin!4v1772018904748!5m2!1sen!2sin"
-              title="Little Learner's Location"
+              title="Little Learns Location"
             />
           </div>
         </div>

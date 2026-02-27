@@ -20,7 +20,7 @@ const TeacherSection = () => {
             <div className="teacher-section__details">
               <p className="teacher-section__detail">
                 <span className="teacher-section__icon">✓</span>
-                2+ Years of Teaching Experience
+                5+ Years of Teaching Experience
               </p>
               <p className="teacher-section__detail">
                 <span className="teacher-section__icon">📞</span>
@@ -40,11 +40,11 @@ const TeacherSection = () => {
             <div className="teacher-section__details">
               <p className="teacher-section__detail">
                 <span className="teacher-section__icon">✓</span>
-                2+ Years of Teaching Experience
+                6+ Years of Teaching Experience
               </p>
               <p className="teacher-section__detail">
                 <span className="teacher-section__icon">📞</span>
-                <a href="tel:+919876543211" className="teacher-section__phone">+91 98765 43211</a>
+                <a href="tel:+919876543211" className="teacher-section__phone">+91 7744873174</a>
               </p>
               <p className="teacher-section__quote">
                 "Every child has unique potential waiting to be discovered."
@@ -59,7 +59,7 @@ const TeacherSection = () => {
           <h3 className="teacher-section__map-titlOur Locatione">Our Location</h3>
           <GoogleMapsEmbed
             embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.2455560306453!2d73.88345127371906!3d18.472533170642738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ea88f8769645%3A0xa5707b518bff35ef!2sLittle%20Pearl&#39;s%20Preschool-Pune!5e0!3m2!1sen!2sin!4v1772018904748!5m2!1sen!2sin"
-            title="Little Learner's Location - Dattanagar, Pune"
+            title="Little Learns Location - Dattanagar, Pune"
           />
         </div>
       </div>

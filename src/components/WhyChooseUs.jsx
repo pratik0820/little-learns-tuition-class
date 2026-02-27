@@ -11,7 +11,7 @@ const WhyChooseUs = () => {
     {
       icon: '👨‍🏫',
       title: 'Small Batch Size',
-      description: '6-8 students per batch'
+      description: 'Limited students for personalized attention'
     },
     {
       icon: '👩‍🎓',

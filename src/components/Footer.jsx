@@ -150,7 +150,7 @@ function Footer() {
       <div className="footer__bottom">
         <div className="footer__container">
           <p className="footer__copyright">
-            &copy; {currentYear} Little Learner's. All rights reserved.
+            &copy; {currentYear} Little Learns. All rights reserved.
           </p>
         </div>
       </div>

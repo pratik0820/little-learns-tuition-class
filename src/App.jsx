@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import { initSmoothScroll, cleanupSmoothScroll } from './utils/smoothScroll';
+import { initGA, trackPageView } from './utils/analytics';
 
 // Lazy load page components for code splitting
 const Home = lazy(() => import('./pages/Home'));
@@ -44,6 +45,12 @@ function AppContent() {
     return () => {
       cleanupSmoothScroll();
     };
+  }, [location.pathname]);
+
+  // Track page views on route changes
+  useEffect(() => {
+    const pageTitle = document.title;
+    trackPageView(location.pathname, pageTitle);
   }, [location.pathname]);
 
   return (
@@ -90,10 +97,19 @@ function AppContent() {
  * - Footer
  * - WhatsApp floating button (visible on all pages)
  * - Smooth scrolling for anchor links
+ * - Google Analytics tracking
  * 
  * Uses React Router for navigation between pages.
  */
 function App() {
+  // Initialize Google Analytics on app mount
+  useEffect(() => {
+    const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+    if (measurementId) {
+      initGA(measurementId);
+    }
+  }, []);
+
   return (
     <Router>
       <AppContent />

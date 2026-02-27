@@ -19,6 +19,15 @@
   padding: var(--space-16) 0;
 }
 
+.courses-note {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  text-align: center;
+  max-width: 600px;
+  margin: var(--space-4) auto var(--space-8);
+  font-weight: var(--font-weight-semibold);
+}
+
 .courses-grid {
   display: grid;
   grid-template-columns: 1fr;

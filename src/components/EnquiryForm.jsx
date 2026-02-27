@@ -2,26 +2,45 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import FormInput from './FormInput';
 import Button from './Button';
+import { trackFormSubmission } from '../utils/analytics';
 import './EnquiryForm.css';
 
 /**
  * Validation Functions
  */
 
-// Parent Name Validation
-const validateParentName = (name) => {
+// Student Name Validation
+const validateName = (name, fieldLabel) => {
   const trimmed = name.trim();
   if (trimmed.length === 0) {
-    return { valid: false, error: "Parent name is required" };
+    return { valid: false, error: `${fieldLabel} is required` };
   }
   if (trimmed.length < 2) {
     return { valid: false, error: "Name must be at least 2 characters" };
   }
-  if (trimmed.length > 50) {
-    return { valid: false, error: "Name must not exceed 50 characters" };
+  if (trimmed.length > 30) {
+    return { valid: false, error: "Name must not exceed 30 characters" };
   }
-  if (!/^[a-zA-Z\s]+$/.test(trimmed)) {
-    return { valid: false, error: "Name can only contain letters and spaces" };
+  if (!/^[a-zA-Z]+$/.test(trimmed)) {
+    return { valid: false, error: "Name can only contain letters" };
+  }
+  return { valid: true, error: null };
+};
+
+// Middle Name Validation (Required)
+const validateMiddleName = (name) => {
+  const trimmed = name.trim();
+  if (trimmed.length === 0) {
+    return { valid: false, error: "Middle name is required" };
+  }
+  if (trimmed.length < 2) {
+    return { valid: false, error: "Name must be at least 2 characters" };
+  }
+  if (trimmed.length > 30) {
+    return { valid: false, error: "Name must not exceed 30 characters" };
+  }
+  if (!/^[a-zA-Z]+$/.test(trimmed)) {
+    return { valid: false, error: "Name can only contain letters" };
   }
   return { valid: true, error: null };
 };
@@ -74,7 +93,9 @@ const validateMessage = (message) => {
 const EnquiryForm = ({ onSubmit, className = '' }) => {
   // Form state
   const [formData, setFormData] = useState({
-    parentName: '',
+    firstName: '',
+    middleName: '',
+    surname: '',
     studentStandard: '',
     contactNumber: '',
     message: ''
@@ -82,7 +103,9 @@ const EnquiryForm = ({ onSubmit, className = '' }) => {
 
   // Error state
   const [errors, setErrors] = useState({
-    parentName: '',
+    firstName: '',
+    middleName: '',
+    surname: '',
     studentStandard: '',
     contactNumber: '',
     message: ''
@@ -103,8 +126,12 @@ const EnquiryForm = ({ onSubmit, className = '' }) => {
   // Validate individual field
   const validateField = (name, value) => {
     switch (name) {
-      case 'parentName':
-        return validateParentName(value);
+      case 'firstName':
+        return validateName(value, 'First name');
+      case 'middleName':
+        return validateMiddleName(value);
+      case 'surname':
+        return validateName(value, 'Surname');
       case 'contactNumber':
         return validateContactNumber(value);
       case 'studentStandard':
@@ -119,10 +146,23 @@ const EnquiryForm = ({ onSubmit, className = '' }) => {
   // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    
+    // Restrict contact number to 10 digits
+    if (name === 'contactNumber') {
+      const cleaned = value.replace(/\D/g, '');
+      if (cleaned.length > 10) {
+        return; // Don't update if more than 10 digits
+      }
+      setFormData(prev => ({
+        ...prev,
+        [name]: cleaned
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
     
     // Clear error when user starts typing
     if (errors[name]) {
@@ -190,6 +230,9 @@ const EnquiryForm = ({ onSubmit, className = '' }) => {
       return;
     }
     
+    // Track form submission in analytics
+    trackFormSubmission('enquiry_form');
+    
     // Call parent onSubmit handler if provided
     if (onSubmit) {
       onSubmit(formData);
@@ -216,13 +259,17 @@ const EnquiryForm = ({ onSubmit, className = '' }) => {
           onClick={() => {
             setIsSubmitted(false);
             setFormData({
-              parentName: '',
+              firstName: '',
+              middleName: '',
+              surname: '',
               studentStandard: '',
               contactNumber: '',
               message: ''
             });
             setErrors({
-              parentName: '',
+              firstName: '',
+              middleName: '',
+              surname: '',
               studentStandard: '',
               contactNumber: '',
               message: ''
@@ -239,40 +286,67 @@ const EnquiryForm = ({ onSubmit, className = '' }) => {
     <form className={formClasses} onSubmit={handleSubmit} aria-label="Enquiry form">
       <FormInput
         type="text"
-        label="Parent Name"
-        name="parentName"
-        value={formData.parentName}
+        label="Student First Name"
+        name="firstName"
+        value={formData.firstName}
         onChange={handleChange}
         onBlur={handleBlur}
         required
-        error={errors.parentName}
-        placeholder="Enter your name"
+        error={errors.firstName}
+        placeholder="Enter first name"
       />
 
       <FormInput
-        type="select"
-        label="Student Standard"
-        name="studentStandard"
-        value={formData.studentStandard}
+        type="text"
+        label="Student Middle Name"
+        name="middleName"
+        value={formData.middleName}
         onChange={handleChange}
         onBlur={handleBlur}
         required
-        error={errors.studentStandard}
-        options={standardOptions}
-        placeholder="Select standard"
+        error={errors.middleName}
+        placeholder="Enter middle name"
       />
 
       <FormInput
-        type="tel"
-        label="Contact Number"
-        name="contactNumber"
-        value={formData.contactNumber}
+        type="text"
+        label="Student Surname"
+        name="surname"
+        value={formData.surname}
         onChange={handleChange}
         onBlur={handleBlur}
         required
-        error={errors.contactNumber}
-        placeholder="Enter 10-digit mobile number"
+        error={errors.surname}
+        placeholder="Enter surname"
       />
+
+      <div className="enquiry-form__row">
+        <FormInput
+          type="select"
+          label="Student Standard"
+          name="studentStandard"
+          value={formData.studentStandard}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          required
+          error={errors.studentStandard}
+          options={standardOptions}
+          placeholder="Select standard"
+        />
+
+        <FormInput
+          type="tel"
+          label="Contact Number"
+          name="contactNumber"
+          value={formData.contactNumber}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          required
+          error={errors.contactNumber}
+          placeholder="Enter 10-digit mobile number"
+          maxLength={10}
+        />
+      </div>
 
       <FormInput
         type="textarea"

@@ -23,7 +23,7 @@ const TestimonialCardDemo = () => {
       }}>
         <TestimonialCard
           feedback="My daughter's confidence in mathematics has improved tremendously. The small batch size ensures she gets individual attention, and the teacher is very patient with her questions."
-          parentName="Mrs. Sharma"
+          parentName="Mrs. Shinde"
           studentName="Aarti"
           studentClass="Class 4"
           improvement="Math score increased from 65% to 85% in one term"
@@ -39,14 +39,14 @@ const TestimonialCardDemo = () => {
         
         <TestimonialCard
           feedback="Excellent teaching methods! My child looks forward to attending classes. The concept-based learning approach has made a real difference in her understanding."
-          parentName="Mrs. Reddy"
+          parentName="Mrs. Nikam"
           studentName="Priya"
           studentClass="Class 5"
         />
         
         <TestimonialCard
           feedback="The individual attention in small batches has helped my son overcome his fear of mathematics. He's now more confident and participates actively in class."
-          parentName="Mr. Kumar"
+          parentName="Mr. Sawant"
           studentName="Arjun"
           studentClass="Class 2"
           improvement="Improved from struggling with basic concepts to solving problems independently"
