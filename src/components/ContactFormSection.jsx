@@ -1,7 +1,7 @@
 import React from 'react';
 import EnquiryForm from './EnquiryForm';
 import Button from './Button';
-import { getContextualWhatsAppURL } from '../utils/whatsapp';
+import { generateWhatsAppURL, getContextualWhatsAppURL } from '../utils/whatsapp';
 import './ContactFormSection.css';
 
 /**
@@ -11,7 +11,18 @@ import './ContactFormSection.css';
  */
 const ContactFormSection = () => {
   const handleFormSubmit = (formData) => {
-    console.log('Form submitted:', formData);
+    // Create WhatsApp message with form data
+    const message = `Hi! I would like to enquire about tuition classes.
+
+Student Name: ${formData.firstName} ${formData.middleName} ${formData.surname}
+Standard: ${formData.studentStandard}
+Contact Number: ${formData.contactNumber}${formData.message ? `\nMessage: ${formData.message}` : ''}`;
+
+    // Generate WhatsApp URL with the form data
+    const whatsappURL = generateWhatsAppURL(message, null, 'contact_form');
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
   };
 
   return (
