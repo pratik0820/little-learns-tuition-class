@@ -9,10 +9,11 @@ import './ContactInfo.css';
  * Contact Information Display Component
  * 
  * Displays contact information including phone number, WhatsApp button,
- * address, and operating hours in a clear, card-based layout.
+ * email, address, and operating hours in a clear, card-based layout.
  * 
  * @param {Object} props - Component props
  * @param {string} props.phoneNumber - Phone number for display and click-to-call
+ * @param {string} props.email - Email address for contact
  * @param {string} props.whatsappNumber - WhatsApp number (defaults to phoneNumber if not provided)
  * @param {string} props.whatsappMessage - Custom WhatsApp message
  * @param {Object} props.address - Address object with street, city, state, pincode
@@ -21,6 +22,7 @@ import './ContactInfo.css';
  */
 const ContactInfo = ({
   phoneNumber = '+91 8390339784',
+  email = 'littlelearns.contact@gmail.com',
   whatsappNumber,
   whatsappMessage = "Hi! I'm contacting you via your website. I'd like to know more about Little Learns.",
   address = {
@@ -101,6 +103,34 @@ const ContactInfo = ({
         </p>
       </Card>
 
+      {/* Email Card */}
+      <Card type="info" className="contact-info__card">
+        <div className="contact-info__icon-wrapper contact-info__icon-wrapper--email">
+          <svg
+            className="contact-info__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            aria-hidden="true"
+          >
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </div>
+        <h3 className="contact-info__title">Email Us</h3>
+        <a
+          href={`mailto:${email}`}
+          className="contact-info__link contact-info__email"
+          aria-label={`Email us at ${email}`}
+        >
+          {email}
+        </a>
+        <p className="contact-info__description">
+          Send us an email anytime
+        </p>
+      </Card>
+
       {/* Address Card */}
       <Card type="info" className="contact-info__card">
         <div className="contact-info__icon-wrapper">
@@ -163,6 +193,7 @@ const ContactInfo = ({
 
 ContactInfo.propTypes = {
   phoneNumber: PropTypes.string,
+  email: PropTypes.string,
   whatsappNumber: PropTypes.string,
   whatsappMessage: PropTypes.string,
   address: PropTypes.shape({

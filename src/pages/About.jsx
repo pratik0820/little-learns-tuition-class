@@ -17,14 +17,14 @@ function About() {
         <div className="teachers-grid">
           <TeacherProfileCard 
             name="Ms. Shivani Chinchvale"
-            credentials="B.Ed."
+            credentials="BA, B.Ed."
             phone="+91 8390339784"
             experience="5+ years of experience teaching school students (Class 1-5). Specialized in building strong foundations in English, Mathematics, Science, and Social Studies through personalized attention and concept-based learning."
             photoAlt="Ms. Shivani - Experienced school tuition teacher"
           />
           <TeacherProfileCard 
             name="Ms. Nikita Bhandwalkar"
-            credentials="B.Ed., M.A."
+            credentials="M.A., B.Ed."
             phone="+91 7744873174"
             experience="6+ years of experience teaching school students (Class 1-5). Passionate about creating engaging learning experiences and helping students develop critical thinking skills."
             photoAlt="Ms. Nikita Bhandwalkar - Dedicated school tuition teacher"

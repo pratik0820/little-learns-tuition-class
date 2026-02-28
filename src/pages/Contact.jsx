@@ -61,6 +61,7 @@ _This enquiry was submitted through the website._`;
           <h2 className="contact-section-title">Get in Touch</h2>
           <ContactInfo
             phoneNumber="+91 8390339784"
+            email="littlelearns.contact@gmail.com"
             whatsappNumber="91 8390339784"
             whatsappMessage="Hi! I'm contacting you via your website. I'd like to know more about Little Learns."
             address={{
@@ -79,7 +80,7 @@ _This enquiry was submitted through the website._`;
           <div className="contact-map-container">
             <h3 className="contact-subsection-title">Find Us</h3>
             <GoogleMapsEmbed
-              embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.2455560306453!2d73.88345127371906!3d18.472533170642738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ea88f8769645%3A0xa5707b518bff35ef!2sLittle%20Pearl&#39;s%20Preschool-Pune!5e0!3m2!1sen!2sin!4v1772018904748!5m2!1sen!2sin"
+              embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.738999456405!2d73.8493161!3d18.4501559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ebbddc17462b%3A0x405afc8a962580fb!2sDhamale%20Developers!5e0!3m2!1sen!2sin!4v1772296747793!5m2!1sen!2sin"
               title="Little Learns Location"
             />
           </div>
