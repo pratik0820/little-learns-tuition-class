@@ -56,13 +56,6 @@ function Classes() {
         <h2 className="section__title">What Makes Our Classes Special</h2>
         <div className="features-grid">
           <div className="feature-item">
-            <div className="feature-icon">📖</div>
-            <h3>Comprehensive Curriculum</h3>
-            <p>
-              Our curriculum covers all subjects from the school board, ensuring students stay ahead in their regular classes while building strong understanding of key concepts.
-            </p>
-          </div>
-          <div className="feature-item">
             <div className="feature-icon">✍️</div>
             <h3>Daily Homework Support</h3>
             <p>
@@ -92,7 +85,7 @@ function Classes() {
           Limited seats available for the current batch. <a href="/contact">Contact us today</a> to secure your child's spot and give them the academic support they deserve. Read <a href="/testimonials">what other parents say</a> about our classes.
         </p>
         <div className="cta-buttons">
-          <a href="/contact" className="btn btn--primary btn--large">
+          <a href="/contact#enquiry" className="btn btn--primary btn--large">
             Contact Us
           </a>
           <a 

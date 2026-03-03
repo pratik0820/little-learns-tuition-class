@@ -21,7 +21,7 @@ import './Hero.css';
 const Hero = ({
   headline = "Little Learns - Personalized Classes for 1st to 5th Standard",
   subheadline = "Building Bright Futures with Individual Attention & Care",
-  enrollLink = "/contact",
+  enrollLink = "/contact#enquiry",
   whatsappLink = getContextualWhatsAppURL('home'),
   heroImage = "/images/student-image.jpg",
   highlights = [

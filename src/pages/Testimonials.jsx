@@ -92,7 +92,7 @@ function Testimonials() {
           Give your child the same opportunity to excel. Limited seats available in our small batches. <a href="/contact">Contact us today</a> to schedule a demo class and see the difference. Learn more <a href="/about">about our experienced teacher</a> and teaching approach.
         </p>
         <div className="cta-buttons">
-          <a href="/contact" className="btn btn--primary btn--large">
+          <a href="/contact#enquiry" className="btn btn--primary btn--large">
             Contact Us
           </a>
           <a 

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import Section from '../components/Section';
 import ContactInfo from '../components/ContactInfo';
 import GoogleMapsEmbed from '../components/GoogleMapsEmbed';
-import EnquiryForm from '../components/EnquiryForm';
+import RegistrationForm from '../components/RegistrationForm';
 import SEO from '../components/SEO';
-// import { sendEnquiryEmail } from '../services/emailService';
+import { sendRegistrationEmail } from '../services/emailService';
 import './Contact.css';
 
 /**
@@ -22,36 +22,40 @@ import './Contact.css';
  * Requirements: 7.1, 7.2, 7.3, 7.4, 7.5
  */
 const Contact = () => {
-  const handleFormSubmit = (formData) => {
-    // Format the enquiry data for WhatsApp message
-    const message = `*New Enquiry from Website*
+  // Handle smooth scroll to enquiry section if hash is present
+  useEffect(() => {
+    if (window.location.hash === '#enquiry') {
+      const enquirySection = document.getElementById('enquiry');
+      if (enquirySection) {
+        setTimeout(() => {
+          enquirySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, []);
 
-*Student Name:* ${formData.firstName} ${formData.middleName} ${formData.surname}
-*Standard:* ${formData.studentStandard}
-*Contact Number:* ${formData.contactNumber}
-${formData.message ? `*Message:* ${formData.message}` : ''}
-
-_This enquiry was submitted through the website._`;
-
-    // Generate WhatsApp URL with the enquiry details
-    const whatsappURL = generateWhatsAppURL(message);
-    
-    // Open WhatsApp in a new tab
-    window.open(whatsappURL, '_blank');
+  const handleFormSubmit = async (formData) => {
+    try {
+      // Send registration email
+      await sendRegistrationEmail(formData);
+    } catch (error) {
+      console.error('Error sending registration:', error);
+      throw error;
+    }
   };
 
   return (
     <div className="contact-page">
       <SEO 
         title="Contact Us"
-        description="Get in touch with us for tuition class enquiries. Call, WhatsApp, or fill out our enquiry form. We respond within 24 hours. Find our location, operating hours, and contact information."
-        keywords="contact tuition classes, enquiry form, phone number, WhatsApp contact, location, operating hours, admission enquiry"
+        description="Register your child for tuition classes at Little Learns. Fill out our registration form with student and parent details. We respond within 24 hours. Find our location, operating hours, and contact information."
+        keywords="student registration, enroll tuition classes, admission form, contact tuition, phone number, WhatsApp contact, location, operating hours"
       />
       
       <Section style="hero" title="Contact Us">
         <p className="contact-intro">
-          Have questions about Little Learns? We'd love to hear from you. 
-          Reach out using any of the methods below, and we'll get back to you soon.
+          Ready to enroll your child at Little Learns? Fill out our registration form below 
+          or reach out using any of the contact methods. We'll get back to you within 24 hours.
         </p>
       </Section>
 
@@ -61,8 +65,8 @@ _This enquiry was submitted through the website._`;
           <h2 className="contact-section-title">Get in Touch</h2>
           <ContactInfo
             phoneNumber="+91 8390339784"
-            email="littlelearns.contact@gmail.com"
-            whatsappNumber="91 8390339784"
+            email="littlelearns.contacts@gmail.com"
+            whatsappNumber="918390339784"
             whatsappMessage="Hi! I'm contacting you via your website. I'd like to know more about Little Learns."
             address={{
               street: 'Dattanagar behind Siddhivinayak Mandir',
@@ -86,14 +90,15 @@ _This enquiry was submitted through the website._`;
           </div>
         </div>
 
-        {/* Send Us an Enquiry Section */}
-        <div className="contact-form-section">
-          <h2 className="contact-section-title">Send Us an Enquiry</h2>
+        {/* Registration Form Section */}
+        <div className="contact-form-section" id="enquiry">
+          <h2 className="contact-section-title">Student Registration</h2>
           <p className="contact-form-description">
-            Fill out the form below and we'll contact you within 24 hours to discuss 
-            your child's needs.
+            Fill out the registration form below to enroll your child in our tuition classes. 
+            We'll review your application and contact you within 24 hours to confirm enrollment 
+            and discuss batch timings.
           </p>
-          <EnquiryForm onSubmit={handleFormSubmit} />
+          <RegistrationForm onSubmit={handleFormSubmit} />
         </div>
       </Section>
     </div>

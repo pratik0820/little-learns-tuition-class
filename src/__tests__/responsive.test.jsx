@@ -101,7 +101,7 @@ describe('Mobile-First Responsive Layouts', () => {
     it('should render TestimonialCard at 320px width', () => {
       setViewportWidth(320);
       const testimonialData = {
-        parentName: 'Mrs. Sharma',
+        parentName: 'Mrs. Shinde',
         studentName: 'Aarav',
         studentClass: 'Class 4',
         feedback: 'Excellent teaching!',
@@ -303,7 +303,7 @@ describe('Mobile-First Responsive Layouts', () => {
     it('should render testimonial cards in single column on mobile', () => {
       setViewportWidth(375);
       const testimonialData = {
-        parentName: 'Mrs. Sharma',
+        parentName: 'Mrs. Shinde',
         studentName: 'Aarav',
         studentClass: 'Class 4',
         feedback: 'Excellent teaching!',

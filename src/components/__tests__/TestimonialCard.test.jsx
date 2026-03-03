@@ -5,7 +5,7 @@ import TestimonialCard from '../TestimonialCard';
 describe('TestimonialCard', () => {
   const defaultProps = {
     feedback: "My daughter's confidence has improved tremendously.",
-    parentName: "Mrs. Sharma",
+    parentName: "Mrs. Shinde",
     studentName: "Aarti",
     studentClass: "Class 4"
   };
@@ -18,7 +18,7 @@ describe('TestimonialCard', () => {
 
     it('should display parent name', () => {
       render(<TestimonialCard {...defaultProps} />);
-      expect(screen.getByText('Mrs. Sharma')).toBeInTheDocument();
+      expect(screen.getByText('Mrs. Shinde')).toBeInTheDocument();
     });
 
     it('should display student name and class', () => {

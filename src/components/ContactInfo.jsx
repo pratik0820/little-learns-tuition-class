@@ -22,7 +22,7 @@ import './ContactInfo.css';
  */
 const ContactInfo = ({
   phoneNumber = '+91 8390339784',
-  email = 'littlelearns.contact@gmail.com',
+  email = 'littlelearns.contacts@gmail.com',
   whatsappNumber,
   whatsappMessage = "Hi! I'm contacting you via your website. I'd like to know more about Little Learns.",
   address = {
@@ -40,7 +40,8 @@ const ContactInfo = ({
 }) => {
   const whatsappUrl = generateWhatsAppURL(
     whatsappMessage,
-    whatsappNumber || phoneNumber.replace(/[^0-9]/g, '')
+    whatsappNumber || phoneNumber.replace(/[^0-9]/g, ''),
+    'contact_info'
   );
 
   const formatPhoneForCall = (phone) => {
@@ -95,6 +96,8 @@ const ContactInfo = ({
           href={whatsappUrl}
           ariaLabel="Contact us on WhatsApp"
           className="contact-info__whatsapp-btn"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Chat on WhatsApp
         </Button>

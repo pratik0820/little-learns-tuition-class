@@ -199,7 +199,7 @@ describe('Responsive Breakpoint Transitions', () => {
 
     it('should maintain TestimonialCard structure across tablet-desktop breakpoint', () => {
       const testimonialData = {
-        parentName: 'Mrs. Sharma',
+        parentName: 'Mrs. Shinde',
         studentName: 'Aarav',
         studentClass: 'Class 4',
         feedback: 'Excellent teaching!',

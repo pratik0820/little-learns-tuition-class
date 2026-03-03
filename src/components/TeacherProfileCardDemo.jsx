@@ -12,8 +12,8 @@ const TeacherProfileCardDemo = () => {
         name="Mrs. Shivani Chinchvale"
         credentials="B.Ed., M.A. in Education"
         phone="+91 8390339784"
-        experience="2+ years of experience teaching primary school students (Class 1-5). Specialized in building strong foundations in English, Mathematics, Science, and Social Studies through personalized attention and concept-based learning."
-        photoAlt="Mrs. Shivani - Experienced primary school tuition teacher"
+        experience="5+ years of experience teaching school students (Class 1-5). Specialized in building strong foundations in English, Mathematics, Science, and Social Studies through personalized attention and concept-based learning."
+        photoAlt="Ms. Shivani - Experienced school tuition teacher"
       />
     </div>
   );

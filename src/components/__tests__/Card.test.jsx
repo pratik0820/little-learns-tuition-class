@@ -120,14 +120,14 @@ describe('Card Component', () => {
         <Card 
           type="testimonial"
           body="Great experience with the tuition classes!"
-          footer="Mrs. Sharma"
+          footer="Mrs. Shinde"
         />
       );
       
       const card = container.querySelector('.card--testimonial');
       expect(card).toBeInTheDocument();
       expect(screen.getByText('Great experience with the tuition classes!')).toBeInTheDocument();
-      expect(screen.getByText('Mrs. Sharma')).toBeInTheDocument();
+      expect(screen.getByText('Mrs. Shinde')).toBeInTheDocument();
     });
 
     it('should support course variant (Requirement 12.7, 17.2)', () => {
