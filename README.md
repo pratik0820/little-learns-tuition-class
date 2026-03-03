@@ -6,11 +6,24 @@ A modern, responsive website for tuition classes targeting primary school studen
 
 - Mobile-first responsive design
 - Multi-page application with React Router
+- Student registration form with EmailJS integration
 - WhatsApp integration for instant enquiries
 - Contact form with validation
 - Testimonials and FAQ sections
 - SEO-friendly and accessible
 - Google Analytics 4 visitor tracking
+
+## 📚 Documentation
+
+Comprehensive documentation is available in the [`docs/`](./docs/) folder:
+
+- **Setup Guides**: Analytics, EmailJS, Registration Form
+- **Component Documentation**: All reusable components
+- **Deployment**: Step-by-step deployment guide
+- **Testing**: Testing strategies and validation
+- **Performance**: Optimization techniques
+
+See [docs/README.md](./docs/README.md) for the complete documentation index.
 
 ## Project Structure
 
@@ -22,9 +35,11 @@ tuition-website/
 │   ├── styles/         # CSS files
 │   ├── assets/         # Images, icons, fonts
 │   ├── utils/          # Utility functions
+│   ├── services/       # Email and API services
 │   ├── App.jsx         # Main App component
 │   └── main.jsx        # Entry point
 ├── public/             # Static assets
+├── docs/               # Documentation files
 ├── index.html          # HTML template
 ├── vite.config.js      # Vite configuration
 ├── .eslintrc.cjs       # ESLint configuration
@@ -46,12 +61,14 @@ tuition-website/
 npm install
 ```
 
-2. Set up Google Analytics (optional):
+2. Set up environment variables:
 ```bash
 cp .env.example .env
-# Edit .env and add your Google Analytics Measurement ID
+# Edit .env and add your configuration:
+# - Google Analytics Measurement ID
+# - EmailJS Service ID, Template ID, and Public Key
 ```
-See [ANALYTICS_SETUP_GUIDE.md](./ANALYTICS_SETUP_GUIDE.md) for detailed instructions.
+See [docs/ANALYTICS_SETUP_GUIDE.md](./docs/ANALYTICS_SETUP_GUIDE.md) and [docs/REGISTRATION_FORM_SETUP.md](./docs/REGISTRATION_FORM_SETUP.md) for detailed instructions.
 
 3. Start the development server:
 ```bash
@@ -72,9 +89,28 @@ npm run dev
 - React 18
 - React Router DOM
 - Vite
+- EmailJS (for registration form emails)
 - Google Analytics 4
 - ESLint
 - Prettier
+
+## Key Features
+
+### Student Registration Form
+- Comprehensive form collecting student and parent information
+- Automated email notifications via EmailJS
+- Real-time validation and error handling
+- Mobile-responsive design
+
+### WhatsApp Integration
+- Direct WhatsApp links from multiple pages
+- Context-aware pre-filled messages
+- Updated contact number: +91 83903 39784
+
+### Smooth Navigation
+- "Enroll Now" buttons scroll directly to registration form
+- Smooth scrolling between sections
+- Mobile-friendly navigation
 
 ## Design System
 
