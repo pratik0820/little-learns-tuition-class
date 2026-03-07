@@ -28,7 +28,7 @@ const ProgramsSection = () => {
   ];
 
   return (
-    <section className="programs-section">
+    <section id="programs" className="programs-section">
       <div className="container">
         <h2 className="programs-section__title">Our Programs</h2>
         <div className="programs-section__grid">

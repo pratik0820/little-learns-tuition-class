@@ -8,20 +8,13 @@ function About() {
   return (
     <div className="about-page">
       <SEO 
-        title="About Our Teachers"
-        description="Meet our experienced educators dedicated to teaching primary school students. Learn about our teaching philosophy, background, and why parents choose our tuition classes."
-        keywords="experienced teachers, primary education, teaching philosophy, qualified educators, B.Ed, concept-based learning"
+        title="About Our Teacher"
+        description="Meet our experienced educator dedicated to teaching primary school students. Learn about our teaching philosophy, background, and why parents choose our tuition classes."
+        keywords="experienced teacher, primary education, teaching philosophy, qualified educator, B.Ed, concept-based learning"
       />
       
-      <Section style="hero" title="About Our Teachers">
+      <Section style="hero" title="About Our Teacher">
         <div className="teachers-grid">
-          <TeacherProfileCard 
-            name="Ms. Shivani Chinchvale"
-            credentials="BA, B.Ed."
-            phone="+91 8390339784"
-            experience="5+ years of experience teaching school students (Class 1-5). Specialized in building strong foundations in English, Mathematics, Science, and Social Studies through personalized attention and concept-based learning."
-            photoAlt="Ms. Shivani - Experienced school tuition teacher"
-          />
           <TeacherProfileCard 
             name="Ms. Nikita Bhandwalkar"
             credentials="M.A., B.Ed."
@@ -36,10 +29,10 @@ function About() {
         <h2 className="section__title">Personal Introduction</h2>
         <div className="content-block">
           <p>
-            Hello! We are dedicated teachers with a passion for helping young students build a strong foundation for their learning journey. With years of combined experience teaching Class 1 to 5, we understand that each child learns differently and needs a supportive environment where they can thrive.
+            Hello! I am a dedicated teacher with a passion for helping young students build a strong foundation for their learning journey. With years of experience teaching Class 1 to 5, I understand that each child learns differently and needs a supportive environment where they can thrive.
           </p>
           <p>
-            Our teaching approach is simple: every child deserves personal attention and the chance to learn at their own pace. That's why we work with small batches to ensure each student gets the individual support they need to succeed. Learn more about our <a href="/classes">tuition programs for Class 1-5</a>.
+            My teaching approach is simple: every child deserves personal attention and the chance to learn at their own pace. That's why I work with small batches to ensure each student gets the individual support they need to succeed. Learn more about my <a href="/classes">tuition programs for Class 1-5</a>.
           </p>
         </div>
       </Section>
@@ -48,7 +41,7 @@ function About() {
         <h2 className="section__title">Teaching Philosophy</h2>
         <div className="content-block">
           <p>
-            We believe learning should be enjoyable and enriching. Our teaching approach is built on three core ideas:
+            I believe learning should be enjoyable and enriching. My teaching approach is built on three core ideas:
           </p>
           <div className="philosophy-points">
             <div className="philosophy-point">
@@ -77,19 +70,19 @@ function About() {
         <h2 className="section__title">Background and Experience</h2>
         <div className="content-block">
           <p>
-            Over the years, we've had the privilege of teaching hundreds of students, helping them improve their grades, build confidence, and develop a genuine interest in learning. Our combined experience covers all subjects taught in Classes 1-5, including English, Mathematics, Science, and Social Studies.
+            Over the years, I've had the privilege of teaching hundreds of students, helping them improve their grades, build confidence, and develop a genuine interest in learning. My experience covers all subjects taught in Classes 1-5, including English, Mathematics, Science, and Social Studies.
           </p>
           <p>
-            We hold degrees in Education and have completed training in child psychology and modern teaching methods. This helps us understand not just what to teach, but how to teach it effectively to young learners.
+            I hold a degree in Education and have completed training in child psychology and modern teaching methods. This helps me understand not just what to teach, but how to teach it effectively to young learners.
           </p>
           <p>
-            Beyond academics, we focus on developing important skills like time management, good study habits, and problem-solving. These skills help students not just now, but throughout their school years.
+            Beyond academics, I focus on developing important skills like time management, good study habits, and problem-solving. These skills help students not just now, but throughout their school years.
           </p>
         </div>
       </Section>
 
       <Section style="alternate" className="why-choose-section">
-        <h2 className="section__title">Why Choose Our Classes</h2>
+        <h2 className="section__title">Why Choose My Classes</h2>
         <div className="content-block">
           <div className="reasons-grid">
             <div className="reason-card">
@@ -131,7 +124,7 @@ function About() {
               <div className="reason-icon">🤝</div>
               <h3>Parent Partnership</h3>
               <p>
-                We believe in working closely with parents. Open communication ensures we're all working together toward the child's success. <a href="/contact">Contact us</a> to learn more.
+                I believe in working closely with parents. Open communication ensures we're all working together toward the child's success. <a href="/contact">Contact me</a> to learn more.
               </p>
             </div>
           </div>

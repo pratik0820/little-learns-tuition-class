@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import OfferBanner from '../components/OfferBanner';
 import AdmissionsUrgencyBanner from '../components/AdmissionsUrgencyBanner';
 import WhyChooseUs from '../components/WhyChooseUs';
 import ProgramsSection from '../components/ProgramsSection';
@@ -36,6 +37,9 @@ const Home = () => {
       
       {/* Hero Section with Image */}
       <Hero />
+
+      {/* Special Offer Banner */}
+      <OfferBanner />
 
       {/* Admissions Urgency Banner */}
       <AdmissionsUrgencyBanner />

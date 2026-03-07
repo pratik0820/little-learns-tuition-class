@@ -1,0 +1,271 @@
+/**
+ * OfferBanner Component Styles
+ * 
+ * Clean, modern card-based design that integrates well with the website
+ */
+
+.offer-banner {
+  padding: var(--space-8) 0;
+  background: var(--color-background);
+}
+
+.offer-banner__card {
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+  position: relative;
+}
+
+/* Subtle gradient overlay */
+.offer-banner__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+}
+
+.offer-banner__content {
+  flex: 1;
+}
+
+.offer-banner__badge {
+  display: inline-block;
+  background: var(--color-secondary);
+  color: var(--color-text);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-4);
+}
+
+.offer-banner__title {
+  margin: 0 0 var(--space-4) 0;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  line-height: var(--line-height-tight);
+}
+
+.offer-banner__description {
+  margin: 0 0 var(--space-6) 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text-light);
+  line-height: var(--line-height-normal);
+  max-width: 500px;
+}
+
+.offer-banner__features {
+  display: flex;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.offer-banner__feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.offer-banner__icon {
+  font-size: var(--font-size-base);
+}
+
+.offer-banner__actions {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.offer-banner__cta {
+  font-weight: var(--font-weight-semibold);
+}
+
+.offer-banner__learn-more {
+  color: var(--color-text-light);
+  border-color: var(--color-border);
+}
+
+.offer-banner__learn-more:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Visual Section - Discount Circle */
+.offer-banner__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-banner__discount-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.offer-banner__discount-circle::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+  z-index: -1;
+}
+
+.offer-banner__discount-text {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.offer-banner__discount-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: var(--space-1);
+}
+
+/* ========================================
+   TABLET STYLES (768px and above)
+   ======================================== */
+
+@media (min-width: 768px) {
+  .offer-banner {
+    padding: var(--space-10) 0;
+  }
+
+  .offer-banner__card {
+    padding: var(--space-10);
+  }
+
+  .offer-banner__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .offer-banner__description {
+    font-size: var(--font-size-lg);
+  }
+
+  .offer-banner__discount-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .offer-banner__discount-text {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* ========================================
+   DESKTOP STYLES (1024px and above)
+   ======================================== */
+
+@media (min-width: 1024px) {
+  .offer-banner__card {
+    padding: var(--space-12);
+  }
+
+  .offer-banner__title {
+    font-size: var(--font-size-4xl);
+  }
+
+  .offer-banner__features {
+    gap: var(--space-8);
+  }
+
+  .offer-banner__discount-circle {
+    width: 160px;
+    height: 160px;
+  }
+
+  .offer-banner__discount-text {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+/* ========================================
+   MOBILE STYLES (below 768px)
+   ======================================== */
+
+@media (max-width: 767px) {
+  .offer-banner {
+    padding: var(--space-6) 0;
+  }
+
+  .offer-banner__card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: var(--space-6);
+    gap: var(--space-6);
+  }
+
+  .offer-banner__title {
+    font-size: var(--font-size-xl);
+  }
+
+  .offer-banner__description {
+    font-size: var(--font-size-sm);
+    max-width: none;
+  }
+
+  .offer-banner__features {
+    justify-content: center;
+    gap: var(--space-4);
+  }
+
+  .offer-banner__feature {
+    font-size: var(--font-size-xs);
+  }
+
+  .offer-banner__actions {
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .offer-banner__cta,
+  .offer-banner__learn-more {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .offer-banner__discount-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .offer-banner__discount-text {
+    font-size: var(--font-size-lg);
+  }
+
+  .offer-banner__discount-label {
+    font-size: var(--font-size-xs);
+  }
+}

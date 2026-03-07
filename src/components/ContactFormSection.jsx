@@ -26,7 +26,7 @@ Contact Number: ${formData.contactNumber}${formData.message ? `\nMessage: ${form
   };
 
   return (
-    <section className="contact-form-section">
+    <section id="contact-form" className="contact-form-section">
       <div className="container">
         <h2 className="contact-form-section__title">Get In Touch</h2>
         <div className="contact-form-section__content">
