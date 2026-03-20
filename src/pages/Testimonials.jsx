@@ -89,7 +89,7 @@ function Testimonials() {
       <Section style="alternate" className="testimonials-cta-section">
         <h2 className="section__title">Join Our Happy Parents</h2>
         <p className="testimonials-cta-text">
-          Give your child the same opportunity to excel. Limited seats available in our small batches. <a href="/contact">Contact us today</a> to schedule a demo class and see the difference. Learn more <a href="/about">about our experienced teacher</a> and teaching approach.
+          Give your child the same opportunity to excel. Limited seats available in our small batches. <a href="/contact">Contact us today</a> to schedule a demo class and see the difference.
         </p>
         <div className="cta-buttons">
           <a href="/contact#enquiry" className="btn btn--primary btn--large">

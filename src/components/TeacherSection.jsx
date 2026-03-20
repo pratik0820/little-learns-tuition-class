@@ -15,7 +15,7 @@ const TeacherSection = () => {
         <h2 className="teacher-section__title">Meet Your Teacher</h2>
         <div className="teacher-section__content">
           <div className="teacher-section__info">
-            <h3 className="teacher-section__name">Ms. Nikita Bhandwalkar</h3>
+            <h3 className="teacher-section__name">Your Teacher</h3>
             <p className="teacher-section__subtitle">Dedicated Learning Specialist</p>
             <div className="teacher-section__details">
               <p className="teacher-section__detail">
@@ -24,7 +24,7 @@ const TeacherSection = () => {
               </p>
               <p className="teacher-section__detail">
                 <span className="teacher-section__icon">📞</span>
-                <a href="tel:+917744873174" className="teacher-section__phone">+91 7744873174</a>
+                <a href="tel:+918390339784" className="teacher-section__phone">+91 8390339784</a>
               </p>
               <p className="teacher-section__quote">
                 "Every child has unique potential waiting to be discovered."

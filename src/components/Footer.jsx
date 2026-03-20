@@ -22,7 +22,6 @@ function Footer() {
 
   const quickLinks = [
     { label: 'Home', path: '/', id: 'home' },
-    { label: 'About Teacher', path: '/about', id: 'about' },
     { label: 'Classes', path: '/classes', id: 'classes' },
     { label: 'Testimonials', path: '/testimonials', id: 'testimonials' },
     { label: 'Contact', path: '/contact', id: 'contact' }

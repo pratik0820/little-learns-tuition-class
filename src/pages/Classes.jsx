@@ -16,7 +16,7 @@ function Classes() {
       
       <Section style="hero" title="Our Classes">
         <p className="classes-intro">
-          We offer specialized tuition programs for primary school students, designed to build strong foundations and help them excel. Our small batch sizes ensure every child gets the individual attention they deserve. Learn more <a href="/about">about our experienced teacher</a> and teaching approach.
+          We offer specialized tuition programs for primary school students, designed to build strong foundations and help them excel. Our small batch sizes ensure every child gets the individual attention they deserve.
         </p>
       </Section>
 

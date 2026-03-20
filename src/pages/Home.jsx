@@ -5,7 +5,6 @@ import AdmissionsUrgencyBanner from '../components/AdmissionsUrgencyBanner';
 import WhyChooseUs from '../components/WhyChooseUs';
 import ProgramsSection from '../components/ProgramsSection';
 import TestimonialsPreview from '../components/TestimonialsPreview';
-import TeacherSection from '../components/TeacherSection';
 import ContactFormSection from '../components/ContactFormSection';
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
@@ -20,7 +19,6 @@ import './Home.css';
  * - Why Choose Us section
  * - Our Programs section
  * - Parent Testimonials
- * - Meet Your Teacher section
  * - Get In Touch contact form
  * 
  * Requirements: 1.1, 1.2, 1.3, 1.4, 9.1, 10.1
@@ -57,9 +55,6 @@ const Home = () => {
           <TestimonialsPreview />
         </div>
       </section>
-
-      {/* Meet Your Teacher Section */}
-      <TeacherSection />
 
       {/* Get In Touch Contact Form */}
       <ContactFormSection />
