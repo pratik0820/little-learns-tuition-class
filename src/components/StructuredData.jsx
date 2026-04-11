@@ -18,8 +18,8 @@ const StructuredData = ({ type = 'organization', data = null }) => {
     const defaultOrgSchema = {
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
-      "name": "Little Learns - Tuition Classes for Primary Students",
-      "description": "Little Learns offers quality tuition classes for primary school students (Class 1-5) with small batch sizes, individual attention, and concept-based learning",
+      "name": "Little Learns - Tuition Classes for Nursery to 6th Students",
+      "description": "Little Learns offers quality tuition classes for Nursery to 6th students with small batch sizes, individual attention, and concept-based learning",
       "url": window.location.origin,
       "telephone": "+91XXXXXXXXXX",
       "address": {
@@ -40,7 +40,7 @@ const StructuredData = ({ type = 'organization', data = null }) => {
       "audience": {
         "@type": "EducationalAudience",
         "educationalRole": "student",
-        "audienceType": "Primary School Students (Class 1-5)"
+        "audienceType": "Students from Nursery to 6th"
       }
     };
 

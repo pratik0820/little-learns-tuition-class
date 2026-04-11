@@ -19,7 +19,7 @@ import './Hero.css';
  * @param {Object} props.quickInfo - Quick info object with standards, subjects, and location
  */
 const Hero = ({
-  headline = "Little Learns - Personalized Classes for 1st to 5th Standard",
+  headline = "Little Learns - Personalized Classes for Nursery to 6th Standard",
   subheadline = "Building Bright Futures with Individual Attention & Care",
   enrollLink = "/contact#enquiry",
   whatsappLink = getContextualWhatsAppURL('home'),
@@ -31,7 +31,7 @@ const Hero = ({
     { icon: "🎯", text: "Concept Based Learning" }
   ],
   quickInfo = {
-    standards: "Class 1-5",
+    standards: "Nursery to 6th",
     subjects: "English, Maths, Science, EVS",
     location: "Pune"
   }

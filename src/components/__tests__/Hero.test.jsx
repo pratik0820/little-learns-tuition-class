@@ -9,7 +9,7 @@ describe('Hero Component', () => {
       
       // Check headline
       expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-        'Personalized Tuition Classes for 1st to 5th Standard Students'
+        'Personalized Tuition Classes for Nursery to 6th Standard Students'
       );
       
       // Check subheadline
@@ -177,7 +177,7 @@ describe('Hero Component', () => {
       render(<Hero />);
       
       expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-        'Personalized Tuition Classes for 1st to 5th Standard Students'
+        'Personalized Tuition Classes for Nursery to 6th Standard Students'
       );
     });
 

@@ -18,7 +18,7 @@ const ProgramsSection = () => {
       ]
     },
     {
-      title: 'Classes 3rd - 5th',
+      title: 'Classes 3rd - 6th',
       color: '#81d4fa',
       features: [
         'Advanced Math & Science',

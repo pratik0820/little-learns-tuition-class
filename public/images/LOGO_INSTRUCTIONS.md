@@ -25,7 +25,7 @@ If you prefer PNG/JPG instead of SVG:
 2. Update `src/components/Header.jsx` line with the logo:
    ```jsx
    <img 
-     src="/public/images/little-leanrs-logo.jpeg"  // Change from /logo.svg to /logo.png
+     src="/public/images/little-learns-logo.jpeg"  // Change from /logo.svg to /logo.png
      alt="Little Learn's Logo" 
      className="header__logo-image"
    />

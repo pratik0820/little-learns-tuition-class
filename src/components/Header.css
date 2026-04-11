@@ -88,8 +88,9 @@
   height: 45px;
   display: block;
   flex-shrink: 0;
-  object-fit: contain;
-  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {

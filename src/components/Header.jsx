@@ -103,7 +103,7 @@ function Header() {
         <div className="header__brand">
           <Link to="/" className="header__logo" aria-label="Little Learns Home">
             <img 
-              src="/images/little-leanrs-logo.jpeg" 
+              src="/images/little-learns-logo.jpeg" 
               alt="Little Learns Logo" 
               className="header__logo-image"
             />

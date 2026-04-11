@@ -11,7 +11,7 @@ import { useEffect } from 'react';
  * - description: Meta description for the page
  * - keywords: Comma-separated keywords for the page
  * - ogImage: Open Graph image URL (optional)
- * - canonical: Canonical URL (optional, defaults to current URL)
+ * - canonical: Canonical URL (optional, defaults to current URL) 
  * 
  * Requirements: 13.2
  */
@@ -24,7 +24,7 @@ const SEO = ({
 }) => {
   useEffect(() => {
     // Update document title
-    const fullTitle = `${title} | Little Learns - Classes for 1st to 5th Standard`;
+    const fullTitle = `${title} | Little Learns - Classes for Nursery to 6th Standard`;
     document.title = fullTitle;
 
     // Update or create meta tags

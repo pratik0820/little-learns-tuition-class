@@ -9,8 +9,8 @@ function About() {
     <div className="about-page">
       <SEO 
         title="About Our Teacher"
-        description="Meet our experienced educator dedicated to teaching primary school students. Learn about our teaching philosophy, background, and why parents choose our tuition classes."
-        keywords="experienced teacher, primary education, teaching philosophy, qualified educator, B.Ed, concept-based learning"
+        description="Meet our experienced educator dedicated to teaching Nursery to 6th students. Learn about our teaching philosophy, background, and why parents choose our tuition classes."
+        keywords="experienced teacher, nursery to 6th tuition, primary education, teaching philosophy, qualified educator, B.Ed, concept-based learning"
       />
       
       <Section style="hero" title="About Our Teacher">
@@ -19,7 +19,7 @@ function About() {
             name="Our Teacher"
             credentials="M.A., B.Ed."
             phone="+91 8390339784"
-            experience="6+ years of experience teaching school students (Class 1-5). Passionate about creating engaging learning experiences and helping students develop critical thinking skills."
+            experience="6+ years of experience teaching students from Nursery to 6th. Passionate about creating engaging learning experiences and helping students develop critical thinking skills."
             photoAlt="Dedicated school tuition teacher"
           />
         </div>
@@ -29,10 +29,10 @@ function About() {
         <h2 className="section__title">Personal Introduction</h2>
         <div className="content-block">
           <p>
-            Hello! I am a dedicated teacher with a passion for helping young students build a strong foundation for their learning journey. With years of experience teaching Class 1 to 5, I understand that each child learns differently and needs a supportive environment where they can thrive.
+            Hello! I am a dedicated teacher with a passion for helping young students build a strong foundation for their learning journey. With years of experience teaching students from Nursery to 6th, I understand that each child learns differently and needs a supportive environment where they can thrive.
           </p>
           <p>
-            My teaching approach is simple: every child deserves personal attention and the chance to learn at their own pace. That's why I work with small batches to ensure each student gets the individual support they need to succeed. Learn more about my <a href="/classes">tuition programs for Class 1-5</a>.
+            My teaching approach is simple: every child deserves personal attention and the chance to learn at their own pace. That's why I work with small batches to ensure each student gets the individual support they need to succeed. Learn more about my <a href="/classes">tuition programs for Nursery to 6th</a>.
           </p>
         </div>
       </Section>
@@ -70,7 +70,7 @@ function About() {
         <h2 className="section__title">Background and Experience</h2>
         <div className="content-block">
           <p>
-            Over the years, I've had the privilege of teaching hundreds of students, helping them improve their grades, build confidence, and develop a genuine interest in learning. My experience covers all subjects taught in Classes 1-5, including English, Mathematics, Science, and Social Studies.
+            Over the years, I've had the privilege of teaching hundreds of students, helping them improve their grades, build confidence, and develop a genuine interest in learning. My experience covers the key subjects taught from Nursery to 6th, including English, Mathematics, Science, and Social Studies.
           </p>
           <p>
             I hold a degree in Education and have completed training in child psychology and modern teaching methods. This helps me understand not just what to teach, but how to teach it effectively to young learners.
