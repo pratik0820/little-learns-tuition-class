@@ -64,9 +64,9 @@ const Contact = () => {
         <div className="contact-info-section">
           <h2 className="contact-section-title">Get in Touch</h2>
           <ContactInfo
-            phoneNumber="+91 8390339784"
+            phoneNumber="+91 9272488233"
             email="littlelearns.contacts@gmail.com"
-            whatsappNumber="918390339784"
+            whatsappNumber="919272488233"
             whatsappMessage="Hi! I'm contacting you via your website. I'd like to know more about Little Learns."
             address={{
               street: 'Dattanagar behind Siddhivinayak Mandir',

@@ -21,7 +21,7 @@ import './ContactInfo.css';
  * @param {string} props.className - Additional CSS classes
  */
 const ContactInfo = ({
-  phoneNumber = '+91 8390339784',
+  phoneNumber = '+91 9272488233',
   email = 'littlelearns.contacts@gmail.com',
   whatsappNumber,
   whatsappMessage = "Hi! I'm contacting you via your website. I'd like to know more about Little Learns.",

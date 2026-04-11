@@ -24,7 +24,7 @@ const TeacherSection = () => {
               </p>
               <p className="teacher-section__detail">
                 <span className="teacher-section__icon">📞</span>
-                <a href="tel:+918390339784" className="teacher-section__phone">+91 8390339784</a>
+                <a href="tel:+919272488233" className="teacher-section__phone">+91 9272488233</a>
               </p>
               <p className="teacher-section__quote">
                 "Every child has unique potential waiting to be discovered."

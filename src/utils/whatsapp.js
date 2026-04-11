@@ -10,7 +10,7 @@ import { trackWhatsAppClick } from './analytics';
  * WhatsApp configuration
  */
 export const WHATSAPP_CONFIG = {
-  phoneNumber: '918390339784', // Replace with actual phone number (without + or spaces)
+  phoneNumber: '919272488233', // Replace with actual phone number (without + or spaces)
   // defaultMessage: "Hi! I'm interested in enrolling my child in your tuition classes. I'd like to know more about batch timings and fees."
   defaultMessage: "Hi! I'm interested in enrolling in tuition class."
 };

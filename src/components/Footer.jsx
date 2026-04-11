@@ -28,7 +28,7 @@ function Footer() {
   ];
 
   const contactInfo = {
-    phone: '+91 8390339784',
+    phone: '+91 9272488233',
     address: {
       street: 'Dattanagar behind Siddhivinayak Mandir',
       city: 'At Little Pearls Nursery School, Pune',

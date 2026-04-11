@@ -59,13 +59,13 @@ describe('TeacherProfileCard', () => {
       render(
         <TeacherProfileCard
           name="Mrs. Priya Sharma"
-          phone="+91 8390339784"
+          phone="+91 9272488233"
         />
       );
       
-      expect(screen.getByText('+91 8390339784')).toBeInTheDocument();
-      const phoneLink = screen.getByRole('link', { name: '+91 8390339784' });
-      expect(phoneLink).toHaveAttribute('href', 'tel:+91 8390339784');
+      expect(screen.getByText('+91 9272488233')).toBeInTheDocument();
+      const phoneLink = screen.getByRole('link', { name: '+91 9272488233' });
+      expect(phoneLink).toHaveAttribute('href', 'tel:+91 9272488233');
     });
 
     it('does not render phone section when not provided', () => {
@@ -175,7 +175,7 @@ describe('TeacherProfileCard', () => {
           photoUrl="/images/teacher.jpg"
           photoAlt="Teacher Priya Sharma"
           credentials="B.Ed., M.A. in Education"
-          phone="+91 8390339784"
+          phone="+91 9272488233"
           experience="With over 15 years of teaching experience"
         />
       );
@@ -183,7 +183,7 @@ describe('TeacherProfileCard', () => {
       expect(screen.getByText('Mrs. Priya Sharma')).toBeInTheDocument();
       expect(screen.getByAltText('Teacher Priya Sharma')).toBeInTheDocument();
       expect(screen.getByText('B.Ed., M.A. in Education')).toBeInTheDocument();
-      expect(screen.getByText('+91 8390339784')).toBeInTheDocument();
+      expect(screen.getByText('+91 9272488233')).toBeInTheDocument();
       expect(screen.getByText('Experience')).toBeInTheDocument();
       expect(screen.getByText('With over 15 years of teaching experience')).toBeInTheDocument();
     });
