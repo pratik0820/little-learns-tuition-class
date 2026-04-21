@@ -66,7 +66,7 @@ const Contact = () => {
           <ContactInfo
             phoneNumber="+91 9272488233"
             email="littlelearns.contacts@gmail.com"
-            whatsappNumber="919272488233"
+            whatsappNumber="918390339784"
             whatsappMessage="Hi! I'm contacting you via your website. I'd like to know more about Little Learns."
             address={{
               street: 'Dattanagar behind Siddhivinayak Mandir',
